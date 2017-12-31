@@ -23,7 +23,7 @@ description: Dad, Geek, Runner
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  #About Me: "aboutme"
   #Resources:
     #- Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     #- GitHub Pages: "https://pages.github.com/"
