@@ -23,7 +23,7 @@ description: Tech talk and other random stuff
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  Who am I?: "aboutme"
   #Resources:
     #- Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     #- GitHub Pages: "https://pages.github.com/"
