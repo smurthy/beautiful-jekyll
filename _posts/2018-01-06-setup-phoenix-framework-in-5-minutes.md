@@ -15,7 +15,7 @@ Furthermore, you wouldn't think a language like Fortran is servicable today but 
 
 **Use the tool that fits your case even if it's not the marketable skill to have. Trends change.**
 
-These days I crave fault tolerance, distribution, concurrency, and high availability in my projects. For whatever reason I was pursuing the trend, node.js, to achieve this task. It's anychronous processing on a single thread was definitely not optimal for my use case. 
+These days I crave fault tolerance, distribution, concurrency, and high availability in my projects. For whatever reason I was pursuing the trend, node.js, to achieve this task. Its anychronous processing on a single thread was definitely not optimal for my use case. 
 
 This lead me to Erlang. Erlang was born in telecom by Ericsson in the 80s. It reportedly handles around 50% of the world telecom traffic. You also can look at the word's other meaning, [a unit of telecommunications traffic measurement](http://www.erlang.com/whatis.html#erlang), to understand its origin and importance.
 
