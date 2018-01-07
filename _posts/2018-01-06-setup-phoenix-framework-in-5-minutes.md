@@ -11,7 +11,7 @@ I used Java and JBoss, for instance, in my stint at [Micros](https://www.oracle.
 
 Furthermore, you wouldn't think a language like Fortran is servicable today but it's still the most efficient language for complex mathematical calculations. [Why?](https://scicomp.stackexchange.com/questions/203/what-makes-fortran-fast). Intel even built specific libraries for this langauge. You need only peek into any research lab to find out this out. Why bother trying to force this into another language, say Java, when there are domain-specific optimizations built over _DECADES_ into Fortran? You wouldn't.  
 
-**Use tool that fits your case even if it's not the marketable skill to have. Trends change.**
+**Use the tool that fits your case even if it's not the marketable skill to have. Trends change.**
 
 These days I crave fault tolerance, distribution, concurrency, and high availability in my projects. For whatever reason I was pursuing the trend, node.js, to achieve this task. It's anychronous processing on a single thread was definitely not optimal for my use case. 
 
