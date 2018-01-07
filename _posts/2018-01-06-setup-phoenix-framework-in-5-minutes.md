@@ -5,7 +5,7 @@ title: Setting up Phoenix Framework on Webfaction
 ---
 ## Welcoming the erlang web stack: Phoenix and Elixir
 
-I often get asked on which programming language or framework is my expertise. A better question would be what problems am I trying to solve and why was the language/framework used the best choice? There's no one size fits all but previous experience taught me using right tool outweighs any reluctance to learn new languages based on personal bias. 
+I often get asked on which programming language or framework is my expertise. A better question would be what problems am I trying to solve and why was the language/framework used the best choice? There's no one size fits all and my expertise changes based on the problem I'm solving at the moment. Previous experience taught me, though, that using right tool outweighs any reluctance to learn new languages based on personal bias. I've seen programmers refuse to try new stacks because of personal bias against that langauge used. If you hate javascript you'll never willingly use node.js even if your use case is squarely in node.js's wheelhouse.
 
 I used Java and JBoss, for instance, in my stint at [Micros](https://www.oracle.com/corporate/acquisitions/micros/index.html) because it was optimal, at the time, in handling high transaction [ETL](https://www.webopedia.com/TERM/E/ETL.html) workloads. I used Ruby on Rails in the early days since I got shit done, fast, for small scale web apps without the need for an army of additional developers. The rails actual performance didn't matter for a small user base. I opted for speed of development.
 
