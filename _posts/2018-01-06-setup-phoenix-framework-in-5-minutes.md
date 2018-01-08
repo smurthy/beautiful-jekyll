@@ -40,7 +40,8 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 
 **Install inotify tools** 
 
-{: .box-error} This compilation failed on webfaction but it's optional if you don't care for live reloading.
+{: .box-error}
+**Error:** This compilation failed on webfaction but it's optional if you don't care for live reloading.
 
 ```
  wget http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
@@ -60,7 +61,8 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 
 Setup database config at config/dev.exs (I'm using development). This can be skipped with the `--no-ecto` parameter when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
-{: .box-error} Unsupported linux architecture on Webfaction for Brunch. Doesn't work.
+{: .box-error}
+**Error:** Brunch install fails on webfaction due to unsupported linux architecture. Optional.
 
 ![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
 
