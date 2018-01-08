@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Setting up Phoenix Framework on Webfaction
 ---
 ## Welcoming the erlang web stack: Phoenix and Elixir
