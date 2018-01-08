@@ -5,7 +5,7 @@ title: Setting up Phoenix Framework on Webfaction
 ---
 ## Welcoming the erlang web stack: Phoenix and Elixir
 
-These days I crave fault tolerance, distribution, concurrency, and high availability in my projects. For whatever reason I was pursuing the node.js to achieve this task. Its anychronous processing on a single thread was definitely not optimal for my use case. 
+I was looking for a web framework with high fault tolerance, distribution, concurrency, and availability in my projects. For whatever reason I was pursuing node.js and expressjs to achieve this task. Its anychronous processing on a single thread was definitely not optimal for my use case. 
 
 This lead me to Erlang. Erlang was born in telecom by Ericsson in the 80s. It reportedly handles around 50% of the world telecom traffic. You also can look at the word's other meaning, [a unit of telecommunications traffic measurement](http://www.erlang.com/whatis.html#erlang), to understand its origin and importance.
 
@@ -39,7 +39,10 @@ mix local.hex
 mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
 ```
 
-**Install inotify tools** (this failed to install on webfaction but it's optional)
+**Install inotify tools** 
+
+This compilation failed on webfaction but it's optional if you don't care for live reloading.
+
 ```
 wget http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
 tar -xf inotify-tools-3.14.tar.gz
@@ -49,24 +52,26 @@ make
 make install
 ```
 
-**Scaffold a default project** 
-Brunch doesn't work on webfaction because of unsupported linux architecture.
+**Scaffold a default project** with mysql database and no [brunch](http://brunch.io/)
+
 ```
 mix phx.new helloworld --database mysql --no-brunch 
 ```
+![phoenixscaffold.png]({{site.baseurl}}/img/phoenixscaffold.png)
 
-Setup database config at config/dev.exs (I'm using development). This can be skipped with -no_ecto when scaffolding.
+Setup database config at config/dev.exs (I'm using development). This can be skipped with --no-ecto when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
-If you chose the default database (postgres ) you can switch it back to mysql following these instructions: https://phoenixframework.readme.io/docs/using-mysql
+I decided to skip Brunch since it doesn't work on webfaction due to unsupported linux architecture.
 
-Finally, start up the server:
+![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
+
+Finally, start up the server and watch the server output.
 ```
 mix phx.server
 ```
+![phoenixlog.png]({{site.baseurl}}/img/phoenixlog.png=150x)
 
 
+Ta-da. The default page on your site.
 
-![phoenixscaffold.png]({{site.baseurl}}/img/phoenixscaffold.png)
-![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
-![phoenixlog.png]({{site.baseurl}}/img/phoenixlog.png)
 ![defaultpage.png]({{site.baseurl}}/img/defaultpage.png)
