@@ -39,10 +39,6 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 ```
 
 **Install inotify tools** 
-
-{: .box-error}
-**Error:** This compilation failed on webfaction but it's optional if you don't care for live reloading.
-
 ```
  wget http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
  tar -xf inotify-tools-3.14.tar.gz
@@ -51,6 +47,8 @@ Webfaction didn't give me access to install via yum package manager, so everythi
  make 
  make install
 ```
+{: .box-warning}
+**Warning:** Compilation failed on webfaction if you care for live reloading. Optional.
 
 **Scaffold a default project** with mysql database and no [brunch](http://brunch.io/)
 
@@ -61,8 +59,8 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 
 Setup database config at config/dev.exs (I'm using development). This can be skipped with the `--no-ecto` parameter when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
-{: .box-error}
-**Error:** Brunch install fails on webfaction due to unsupported linux architecture. Optional.
+{: .box-warning}
+**Warning:** Brunch install fails on webfaction due to unsupported linux architecture. Optional.
 
 ![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
 
