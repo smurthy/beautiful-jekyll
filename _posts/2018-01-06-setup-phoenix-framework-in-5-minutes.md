@@ -3,7 +3,7 @@ layout: post
 published: true
 title: Set up Phoenix on Webfaction
 ---
-## Welcoming the erlang web stack: Phoenix and Elixir
+## Welcome the erlang web stack: Phoenix and Elixir
 
 I was looking for a web framework with high fault tolerance, distribution, concurrency, and availability in my projects. For whatever reason I was pursuing node.js and expressjs to achieve this task. Its anychronous processing on a single thread was definitely not optimal for my use case. 
 
@@ -17,56 +17,56 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 
 **Install Erlang**
 ```
-wget http://www.erlang.org/download/otp_src_20.2.tar.gz
-tar -xf otp_src_20.2.tar.gz
-cd otp_src_20.2
-./configure --prefix=$HOME
-make
-make install
-export PATH=$PATH:/home/[username]/otp_src_20.2/bin
+ wget http://www.erlang.org/download/otp_src_20.2.tar.gz
+ tar -xf otp_src_20.2.tar.gz
+ cd otp_src_20.2
+ ./configure --prefix=$HOME
+ make
+ make install
+ export PATH=$PATH:/home/[username]/otp_src_20.2/bin
 ```
 **Install Elixir**
 ```
-git clone https://github.com/elixir-lang/elixir.git
-cd elixir
-make 
-
-export PATH=$PATH:/home/smurthy/elixir/bin
+ git clone https://github.com/elixir-lang/elixir.git
+ cd elixir
+ make 
+ export PATH=$PATH:/home/smurthy/elixir/bin
 ```
 **Install Phoenix**
 ```
-mix local.hex
-mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+ mix local.hex
+ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
 ```
 
 **Install inotify tools** 
-This compilation failed on webfaction but it's optional if you don't care for live reloading.
+
+{: .box-error} This compilation failed on webfaction but it's optional if you don't care for live reloading.
 
 ```
-wget http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
-tar -xf inotify-tools-3.14.tar.gz
-cd inotify-tools-3.14
-./configure 
-make 
-make install
+ wget http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
+ tar -xf inotify-tools-3.14.tar.gz
+ cd inotify-tools-3.14
+ ./configure 
+ make 
+ make install
 ```
 
 **Scaffold a default project** with mysql database and no [brunch](http://brunch.io/)
 
 ```
-mix phx.new helloworld --database mysql --no-brunch 
+ mix phx.new helloworld --database mysql --no-brunch 
 ```
 ![phoenixscaffold.png]({{site.baseurl}}/img/phoenixscaffold.png)
 
-Setup database config at config/dev.exs (I'm using development). This can be skipped with --no-ecto when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
+Setup database config at config/dev.exs (I'm using development). This can be skipped with the `--no-ecto` parameter when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
-I skipped Brunch since it doesn't work on webfaction due to unsupported linux architecture.
+{: .box-error} Unsupported linux architecture on Webfaction for Brunch. Doesn't work.
 
 ![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
 
 Finally, start up the server and watch the server output.
 ```
-mix phx.server
+ mix phx.server
 ```
 ![phoenixlog.png]({{site.baseurl}}/img/phoenixlog.png)
 
