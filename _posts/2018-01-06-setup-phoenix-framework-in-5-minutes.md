@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Setting up Phoenix Framework on Webfaction
+title: Set up Phoenix on Webfaction
 ---
 ## Welcoming the erlang web stack: Phoenix and Elixir
 
@@ -40,7 +40,6 @@ mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_
 ```
 
 **Install inotify tools** 
-
 This compilation failed on webfaction but it's optional if you don't care for live reloading.
 
 ```
@@ -61,7 +60,7 @@ mix phx.new helloworld --database mysql --no-brunch
 
 Setup database config at config/dev.exs (I'm using development). This can be skipped with --no-ecto when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
-I decided to skip Brunch since it doesn't work on webfaction due to unsupported linux architecture.
+I skipped Brunch since it doesn't work on webfaction due to unsupported linux architecture.
 
 ![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
 
@@ -69,7 +68,7 @@ Finally, start up the server and watch the server output.
 ```
 mix phx.server
 ```
-![phoenixlog.png]({{site.baseurl}}/img/phoenixlog.png=150x)
+![phoenixlog.png]({{site.baseurl}}/img/phoenixlog.png)
 
 
 Ta-da. The default page on your site.
