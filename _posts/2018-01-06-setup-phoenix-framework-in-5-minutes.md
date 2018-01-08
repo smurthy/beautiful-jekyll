@@ -47,6 +47,7 @@ Webfaction didn't give me access to install via yum package manager, so everythi
  make 
  make install
 ```
+
 {: .box-warning}
 **Warning:** Compilation failed on webfaction if you care for live reloading. Optional.
 
