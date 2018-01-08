@@ -61,7 +61,7 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 Setup database config at config/dev.exs (I'm using development). This can be skipped with the `--no-ecto` parameter when scaffolding. If you chose the default database (postgres ) you can [switch it back to mysql](https://phoenixframework.readme.io/docs/using-mysql).
 
 {: .box-warning}
-**Warning:** Brunch install fails on webfaction due to unsupported linux architecture. Optional.
+**Warning:** Brunch install failed on webfaction due to unsupported linux architecture. Optional.
 
 ![bruncherror.png]({{site.baseurl}}/img/bruncherror.png)
 
