@@ -49,7 +49,7 @@ Webfaction didn't give me access to install via yum package manager, so everythi
 ```
 
 {: .box-warning}
-**Warning:** Compilation failed on webfaction if you care for live reloading. Optional.
+**Warning:** inotify compilation failed on webfaction if you care for live reloading. Optional.
 
 **Scaffold a default project** with mysql database and no [brunch](http://brunch.io/)
 
